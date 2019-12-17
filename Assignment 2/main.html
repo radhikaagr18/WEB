@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html>
+    <head>
+        <title>
+        </title>
+        <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="jquery_ui/jquery-ui.css"/>
+        <link rel="stylesheet" href="jquery_ui/jquery-ui.structure.css"/>
+        <link rel="stylesheet" href="jquery_ui/jquery-ui.theme.css"/>
+
+        
+    </head>
+    <body>
+            
+            
+                
+        <h1>Welcome</h1>
+        <div id="container">
+            
+            <div class="tabs">
+                <button class="tab_link" id="default_open" onclick="open_tab(event,'sign_in')">Sign In</button>
+                <button class="tab_link" onclick="open_tab(event,'sign_up')"">Sign Up</button>
+            </div>
+
+       
+       
+       
+            <div id="sign_in" class="signform">
+                
+            <form >
+                <label ><b>Username</b></label><br/>
+                <input type="text" placeholder="Enter Username" id="uname" required>
+                <label id="in_uname" >Invalid user name</label><br>
+
+                <label ><b>Password</b></label><br/>
+                <input type="password" placeholder="Enter Password" id="len" required>
+                <label id="in_psw" style="visibility: hidden;color: red;" >Password too short</label><br>
+            
+                <button type="button" onclick="validation()" class="btn">Login</button><br/>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>  
+            </form>
+        </div> 
+
+
+      
+      
+      
+        <div id="sign_up" class="signform">
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+    
+    
+    
+    <form id="frm2" action="https://radhikaagr18.github.io/WEB/">
+        <h1 style="text-decoration: underline;">Create an Account</h1><br/>
+        <label class="u_name" id="fname"><b>First Name</b></label>
+        <label class="u_name" id="lname"><b>Last Name</b></label>
+        <input type="text" placeholder="First Name" id="fname" required>
+        
+        <input type="text" placeholder="Last Name" id="lname" required>
+        <label id="f_name">Invalid First Name</label>
+        <label id="l_name">Invalid Last Name</label>
+
+        <label><b>Email</b></label><br/>
+        <input type="text" placeholder="Enter Email" id="email" required>
+        <label id="res" style="color: red;visibility: hidden;">Invalid email address</label>
+        <br/>
+    
+        <label ><b>Password</b></label><br/>
+        <input type="password" placeholder="Enter Password" id="psw" required><br/><br/>
+    
+        <label ><b>Repeat Password</b></label><br/>
+        <input type="password" placeholder="Repeat Password" id="psw-repeat" required><br/>
+        <label id="psw_match" style="color: red;visibility: hidden;">Repeat password does not match.</label><br/>
+
+        <label style="float: left;margin-right: 2%;"><b>Date of Birth</b></label>
+        <input type="text" id="dob" placeholder="Click to select DOB">
+        <br><br>
+        <label ><b>Gender</b></label><br/>
+        <input type="radio" name="gender" value="male" > Male
+        <input type="radio" name="gender" style="margin-left: 5%;" value="female"> Female
+        <input type="radio" name="gender" style="margin-left: 5%;" value="others"> Other<br><br>
+
+
+        <label><input type="checkbox" checked="checked" id="remember" > Remember me<br/></label>
+    
+        <p style="font-size: 100%;color: brown;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p><br/>
+    
+        <div class="clearfix">
+          <button type="button" class="btn" onclick="cancel()">Cancel</button><t/>
+          <button type="button" class="btn" onclick="validate_form()">Sign Up</button>
+        </div>
+    </form>
+        </div>
+        </div>
+    
+        <script src="main.js" type="text/javascript"></script>
+        
+    </body>
+    <script src="jquery.js" type="text/javescript"></script>
+    <script src="jquery_ui/jquery-ui.js" type="text/javascript"></script>
+    
+</html>    
