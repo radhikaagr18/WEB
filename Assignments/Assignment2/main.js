@@ -1,11 +1,11 @@
 
 
 function validate_form(){
-    var email=getElementById("email").value;
-    var fname=getElementById("fname").value;
-    var lname=getElementById("lname").value;
-    var psw=getElementById("psw").value;
-    var psw_repeat=getElementById("psw-repeat").value;
+    var email=document.getElementById("email").value;
+    var fname=document.getElementById("fname").value;
+    var lname=document.getElementById("lname").value;
+    var psw=document.getElementById("psw").value;
+    var psw_repeat=document.getElementById("psw-repeat").value;
 
     var email_id=(/^([a-z A-Z 0-9/.-_]+)@([a-z A-Z 0-9/-]+).([a-z]{2,20})(.[a-z]{2,8})?$/);
     if(email_id.test(email))
@@ -32,9 +32,9 @@ function validate_form(){
             
 }
 function validation(){
-    var uname=getElementById("uname").value;
+    var uname=document.getElementById("uname").value;
     var usrname= /^([a-z A-Z 0-9/.-_]+)$/;
-    var len=getElementById("len").length;
+    var len=document.getElementById("len").length;
     if(len<8)
     {
         document.getElementById("in_psw").style.visibility="visible";
